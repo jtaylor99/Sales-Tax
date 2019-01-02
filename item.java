@@ -4,12 +4,12 @@ import java.util.*;
 public class Item {
     int ItemNumber;
     String Name;
-    float Price;
+    double Price;
     int Quanity;
     String type;
-    float FinalTax;
+    double FinalTax;
    
-    public Item(int ItemNumber, String Name, float Price, int Quanity, String type) {
+    public Item(int ItemNumber, String Name, double Price, int Quanity, String type) {
         this.ItemNumber = ItemNumber;
         this.Name = Name;
         this.Price = Price;
@@ -20,20 +20,20 @@ public class Item {
         return ItemNumber;
     }
     public String getName(){
-        return name;
+        return Name;
     }
-    public float getPrice(){
-        return price;
+    public double getPrice(){
+        return Price;
     }
     public int getQuanity(){
-        return quanity;
+        return Quanity;
     }
     public String getType(){
         return type;
     }
     //This is where I determine the tax for imported goods and exemptions
     void calculateTax() {
-        float Tax;
+        double Tax = 0;
         if (Name.contains("imported")) {
             Tax = .05;
         }
@@ -50,8 +50,8 @@ public class Item {
 //This is the list of items that I will use the order is the name, price, quanity, and type
 //Also this is where the inputs go
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
+        System.out.println("Welcome to the store");
+        System.out.println("Here's our Inventory!");
         List<Item> list = new ArrayList<Item>(10) {{
         add(new Item(1, "Dr.pepper", .50, 10, "food"));
         add(new Item(2, "Kite Runner", 9.00, 1, "book"));
@@ -64,8 +64,9 @@ public class Item {
         add(new Item(9, "imported Gabriel Leather Shoes", 91.00, 1, "shoes"));
         add(new Item(10, "imported Audrey Mini With Chain", 91.00, 1, "purse"));
     };
-
 };
+
+
 };
 }
 
