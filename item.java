@@ -31,6 +31,10 @@ public class Item {
     public String getType(){
         return type;
     }
+    
+    public String toString() {
+        return ItemNumber+ " "+"Name: " + Name+" "+"Price: " + Price+" "+ "Stock: " + Quanity;
+    }
     //This is where I determine the tax for imported goods and exemptions
     void calculateTax() {
         double Tax = 0;
@@ -63,10 +67,15 @@ public class Item {
         list.add(new Item(8, "imported N011-YMR MT1", 136.5, 1, "Jewelry"));
         list.add(new Item(9, "imported Gabriel Leather Shoes", 91.00, 1, "shoes"));
         list.add(new Item(10, "imported Audrey Mini With Chain", 91.00, 1, "purse"));
-        
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
+        Scanner input = new Scanner(System.in);
+        while (true) {
+        System.out.print("Enter Itemname: ");
+        break;
+        }
+
 
 
     
