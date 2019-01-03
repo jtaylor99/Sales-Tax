@@ -41,12 +41,12 @@ public class Item {
         if (Name.contains("imported")) {
             Tax = .05;
         }
-        if (!type.equals("book")||
+        if  (!type.equals("book")||
         (!type.equals("food")||
         (!type.equals("medical product")))) {
             Tax = .10;
         }
-        if((Name.contains("imported")) && (!type.equals("book")||(!type.equals("food")||(!type.equals("medical product"))))) {
+        if  ((Name.contains("imported")) && (!type.equals("book")||(!type.equals("food")||(!type.equals("medical product"))))) {
             Tax = .15;
         }
         FinalTax = Tax * Price;
@@ -70,9 +70,13 @@ public class Item {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
+        List<Item> Cart = new ArrayList<Item>();
         Scanner input = new Scanner(System.in);
-        while (true) {
         System.out.print("Enter Itemname: ");
+        while (true) {
+            int In = input.nextInt();
+            Cart.add(In);
+
         break;
         }
 
