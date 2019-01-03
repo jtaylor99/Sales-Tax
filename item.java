@@ -52,19 +52,24 @@ public class Item {
     public static void main(String[] args) {
         System.out.println("Welcome to the store");
         System.out.println("Here's our Inventory!");
-        List<Item> list = new ArrayList<Item>(10) {{
-        add(new Item(1, "Dr.pepper", .50, 10, "food"));
-        add(new Item(2, "Kite Runner", 9.00, 1, "book"));
-        add(new Item(3, "Purple Rain", 12.00, 1, "music"));
-        add(new Item(4, "Nintendo 64", 69.49, 1, "video game console"));
-        add(new Item(5, "Sharp LC 50LBU591U UltraHD", 200.00, 1, "Television"));
-        add(new Item(6, "imported German White Chocolate bar", 1.00, 1, "food"));
-        add(new Item(7, "imported Ophelia Dress", 91.00, 1, "clothes"));
-        add(new Item(8, "imported N011-YMR MT1", 136.5, 1, "Jewelry"));
-        add(new Item(9, "imported Gabriel Leather Shoes", 91.00, 1, "shoes"));
-        add(new Item(10, "imported Audrey Mini With Chain", 91.00, 1, "purse"));
-    };
-};
+        List<Item> list = new ArrayList<Item>(10);
+        list.add(new Item(1, "Dr.pepper", .50, 10, "food"));
+        list.add(new Item(2, "Kite Runner", 9.00, 1, "book"));
+        list.add(new Item(3, "Purple Rain", 12.00, 1, "music"));
+        list.add(new Item(4, "Nintendo 64", 69.49, 1, "video game console"));
+        list.add(new Item(5, "Sharp LC 50LBU591U UltraHD", 200.00, 1, "Television"));
+        list.add(new Item(6, "imported German White Chocolate bar", 1.00, 1, "food"));
+        list.add(new Item(7, "imported Ophelia Dress", 91.00, 1, "clothes"));
+        list.add(new Item(8, "imported N011-YMR MT1", 136.5, 1, "Jewelry"));
+        list.add(new Item(9, "imported Gabriel Leather Shoes", 91.00, 1, "shoes"));
+        list.add(new Item(10, "imported Audrey Mini With Chain", 91.00, 1, "purse"));
+        
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+
+
+    
 
 
 };
